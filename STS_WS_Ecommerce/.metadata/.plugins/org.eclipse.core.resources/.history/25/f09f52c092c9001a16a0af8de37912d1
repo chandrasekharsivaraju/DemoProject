@@ -1,0 +1,11 @@
+package com.example.demo;
+
+public interface Value {
+	
+	int get();
+
+    default int getDouble() {
+        return get() * 2;
+    }
+
+}

@@ -1,0 +1,49 @@
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class sample {
+
+	public static void main(String args[])
+	{
+		
+		String s = "<P><B>some text</B></P>";
+		
+		List<Integer> list = Arrays.asList(1,16,2,3,11,4,6,5);
+		
+		Set set=new HashSet(list);
+		
+		// Creating a HashSet 
+		//Set<Integer> hashSet = new HashSet<Integer>(); 
+		
+		HashSet hashSet = new HashSet();
+        
+        hashSet.add(31);
+        hashSet.add(4);
+        hashSet.add(8);
+        hashSet.add(12);
+        hashSet.add(5);
+        
+        System.out.println(hashSet);
+		
+		System.out.println(list);
+		System.out.println(set);
+		
+		HashSet<String> names = new HashSet<String>(); names.add("Asker"); names.add("Crak"); names.add("Bayliss"); names.add("Mohna"); names.add("Dina");
+		System.out.println("HashSet before sorting : " + names);
+
+		TreeSet<String> sorted = new TreeSet<String>(names); System.out.println("HashSet sorted using TreeSet : " + sorted);
+
+		
+		HashSet myHashSet = new HashSet();
+		myHashSet.add(1);
+		myHashSet.add(23);
+		myHashSet.add(45);
+		myHashSet.add(12);
+		
+		System.out.println(myHashSet);
+		
+	}
+}

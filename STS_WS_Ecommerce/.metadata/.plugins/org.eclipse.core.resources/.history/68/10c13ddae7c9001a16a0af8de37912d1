@@ -1,0 +1,55 @@
+package com.example.demo;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Function;
+
+interface Sayable{  
+    void say();  
+}  
+
+class TestMethodReference {
+
+	public static void display() {
+
+		System.out.println("no argument display:: ");
+	}
+
+	public static void display(String s) {
+
+		System.out.println("argument display :: ");
+	}
+
+	public static int get(int a) {
+
+		System.out.println("one argument get:: " + a);
+		return a;
+
+	}
+
+	public static int add(int a, int b) {
+		return a + b;
+	}
+
+}
+
+public class methodrefernce {
+
+	public static void main(String[] args) {
+		
+		List<String> stringList = Arrays.asList("chandra", "abhi");
+		
+		Sayable s = TestMethodReference::display;
+		s.say();
+
+		stringList.forEach(TestMethodReference::display);
+
+		Function<Integer, Integer> method2 = TestMethodReference::get;
+
+		method2.apply(10);
+
+		
+
+	}
+
+}

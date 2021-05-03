@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;sumreference&apos; in &apos;com.example.demo.methodrefernce.main(...)&apos; to &apos;getreference&apos;&#x0D;&#x0A;- Original project: &apos;demo&apos;&#x0D;&#x0A;- Original element: &apos;com.example.demo.methodrefernce.main(String[]).sumreference&apos;&#x0D;&#x0A;- Renamed element: &apos;sumreference&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;sumreference&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo{methodrefernce.java[methodrefernce~main~\[QString;@sumreference!899!965!926!937!QFunction\&lt;QInteger;QInteger;&gt;;!0!false" name="getreference" references="true" stamp="1595180967467" version="1.0"/>
+</session>

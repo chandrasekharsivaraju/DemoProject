@@ -1,0 +1,23 @@
+public class sample {
+
+	public static void main(String args[])
+	{
+		
+		//This statement will always look in constant pool for existing object if not creates new 
+		//object in constant pool, but will never refer to the one from heap memory
+		String s = "Hello";
+		String s1 = "Hello";
+		String s2 =  new String("Hello");//new will always creates new object
+		String s3 =  new String("Hello").intern();
+		String s4 = "Hello";
+		
+		System.out.println(System.identityHashCode(s));
+		System.out.println(System.identityHashCode(s1));
+		System.out.println(System.identityHashCode(s2));
+		System.out.println(System.identityHashCode(s3));
+		System.out.println(System.identityHashCode(s4));
+
+		
+		
+	}
+}

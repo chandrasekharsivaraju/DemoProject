@@ -1,0 +1,17 @@
+package com.example.demo;
+
+@FunctionalInterface
+public interface Value {
+	
+	int get();
+
+    default int calculate() {
+        return get() * 2;
+    }
+    
+    default int calculate(int a) {
+        return a * 5;
+    }
+}
+
+

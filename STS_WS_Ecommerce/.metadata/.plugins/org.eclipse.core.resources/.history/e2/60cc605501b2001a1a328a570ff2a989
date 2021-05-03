@@ -1,0 +1,105 @@
+package com.example.demo;
+
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.RepetitionInfo;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+
+@SpringBootTest
+public class TestCalculator {
+
+	@Autowired
+	Calculator cal;
+
+	@MockBean
+	CalculatorService service;
+
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+		System.out.println("**** setUpBeforeClass ******");
+	}
+
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
+		System.out.println("**** tearDownAfterClass ******");
+	}
+
+	@BeforeEach
+	void setUp() throws Exception {
+		System.out.println("**** setUp ******");
+	}
+
+	@AfterEach
+	void tearDown() throws Exception {
+		System.out.println("**** tearDown ******");
+	}
+	
+	@Nested
+	@DisplayName("Class for testing Compute Functionality")
+	class TestCompute {
+		
+		@Test
+		public void testComputePositive() {
+			when(service.addition(5, 3)).thenReturn(8);
+			assertEquals(32, cal.compute(5, 3));
+			verify(service).addition(5, 3);
+		}
+
+		@Test
+		public void testComputeNegative() {
+			when(service.addition(-5, 3)).thenReturn(-2);
+			assertEquals(-8, cal.compute(-5, 3));
+			verify(service).addition(-5, 3);
+		}
+	}
+	
+	
+	@RepeatedTest(3)
+	public void testCompute(RepetitionInfo repitionInfo) 
+	{
+		if(repitionInfo.getCurrentRepetition() == 1)
+		{
+			when(service.addition(5, 3)).thenReturn(8);
+			assertEquals(32, cal.compute(5, 3));
+		}
+		
+		if(repitionInfo.getCurrentRepetition() == 2)
+		{
+			when(service.addition(6, 4)).thenReturn(10);
+			assertEquals(40, cal.compute(6, 4));
+		}
+	}
+	
+	@Test
+	void groupedAssertions() {
+		assertAll("Multiplication",
+				() -> assertEquals(15, 3 * 5, "3 x 5 = 15"),
+				// this fails on purpose to see what the message looks like
+				() -> assertEquals(15, 5 * 3, "5 x 3 = 15")
+		);
+	}
+
+	@Test
+	
+	public void testCompe123() {
+
+		when(service.addition(5, 3)).thenReturn(8);
+		assertEquals(32, cal.compute(5, 3),() -> "assertions failed");
+		
+		verify(service).addition(5, 3);
+	}
+
+}

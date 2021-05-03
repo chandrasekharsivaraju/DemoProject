@@ -1,0 +1,1 @@
+insert into Alien values(525053,'Chandra');

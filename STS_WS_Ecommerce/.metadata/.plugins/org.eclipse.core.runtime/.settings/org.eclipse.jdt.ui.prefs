@@ -1,0 +1,19 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.lang.Enum"><rhs name\="javax.persistence.GenerationType"/><rhs name\="javax.persistence.CascadeType"/><rhs name\="org.springframework.http.HttpStatus"/></lhs><lhs name\="com.scs.ecommerce.exception.EcommerceExceptionDetails"><rhs name\="com.scs.ecommerce.exception.EcommerceExceptionDetails"/></lhs><lhs name\="java.time.temporal.Temporal"><rhs name\="java.time.ZonedDateTime"/></lhs><lhs name\="java.time.temporal.TemporalAccessor"><rhs name\="java.time.ZonedDateTime"/></lhs><lhs name\="java.time.chrono.ChronoZonedDateTime"><rhs name\="java.time.ZonedDateTime"/></lhs><lhs name\="org.springframework.http.HttpEntity"><rhs name\="org.springframework.http.ResponseEntity"/></lhs><lhs name\="org.springframework.http.ResponseEntity"><rhs name\="org.springframework.http.ResponseEntity"/></lhs><lhs name\="com.scs.movie.model.Movie"><rhs name\="com.scs.movie.model.Movie"/></lhs><lhs name\="com.example.demoproject2.model.DemoClient"><rhs name\="com.example.demoproject2.model.DemoClient"/></lhs><lhs name\="com.example.demoproject2.model.DemoEntity"><rhs name\="com.example.demoproject2.model.DemoEntity"/></lhs><lhs name\="com.example.demoproject2.CustomTuple"><rhs name\="com.example.demoproject2.CustomTuple"/></lhs><lhs name\="java.lang.CharSequence"><rhs name\="java.lang.StringBuffer"/></lhs><lhs name\="java.lang.AbstractStringBuilder"><rhs name\="java.lang.StringBuffer"/></lhs><lhs name\="java.lang.Appendable"><rhs name\="java.lang.StringBuffer"/></lhs><lhs name\="com.example.demoproject2.Box"><rhs name\="com.example.demoproject2.Box"/></lhs><lhs name\="com.amazonaws.auth.AWSCredentials"><rhs name\="com.amazonaws.auth.BasicAWSCredentials"/></lhs><lhs name\="com.amazonaws.services.s3.internal.S3DirectSpi"><rhs name\="com.amazonaws.services.s3.AmazonS3Client"/></lhs><lhs name\="com.amazonaws.services.s3.AmazonS3"><rhs name\="com.amazonaws.services.s3.AmazonS3Client"/></lhs><lhs name\="com.aws.s3.amazons3.StorageService"><rhs name\="com.aws.s3.amazons3.StorageService"/></lhs><lhs name\="java.io.Reader"><rhs name\="java.io.BufferedReader"/><rhs name\="java.io.InputStreamReader"/></lhs><lhs name\="java.lang.Readable"><rhs name\="java.io.BufferedReader"/><rhs name\="java.io.InputStreamReader"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.io.BufferedReader"/><rhs name\="java.io.InputStreamReader"/></lhs><lhs name\="java.lang.AutoCloseable"><rhs name\="java.io.BufferedReader"/><rhs name\="java.io.InputStreamReader"/></lhs><lhs name\="java.io.BufferedReader"><rhs name\="java.io.BufferedReader"/></lhs><lhs name\="SourceBenchmark"><rhs name\="SourceBenchmark"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs></history>
+content_assist_number_of_computers=17
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.formatterprofiles.version=18
+spelling_ignore_ampersand_in_properties=true
+spelling_ignore_digits=true
+spelling_ignore_java_strings=true
+spelling_ignore_mixed=true
+spelling_ignore_non_letters=true
+spelling_ignore_sentence=true
+spelling_ignore_single_letters=true
+spelling_ignore_upper=true
+spelling_ignore_urls=true
+spelling_locale_initialized=true
+spelling_user_dictionary_encoding=
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

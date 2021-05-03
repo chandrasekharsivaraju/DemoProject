@@ -1,0 +1,21 @@
+package com.example.demo;
+
+@FunctionalInterface
+public interface Formula {
+	
+	int b=10;
+	
+	double calculate(int a);
+
+    default double sqrt(int a) {
+    	return a * 2;
+    }
+    
+    default int myNewFormule(int a) {
+    	
+        return a*10+5;
+    }
+    
+
+
+}

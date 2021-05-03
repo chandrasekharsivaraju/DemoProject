@@ -1,0 +1,51 @@
+package com.example.demo;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.Arrays;
+import java.util.List;
+
+class testrefernce
+ {
+	 
+	 public static void message(String s)
+	 {
+		 
+		 System.out.println("from different class :: "+s);
+	 }
+	 
+	 public static int message(int s)
+	 {
+		 
+		 System.out.println("from different class :: "+s);
+		 return s;
+		 
+	 }
+	 
+ }
+public class methodrefernce {
+	
+	public static void main(String[] args) {
+		
+		List<String> stringList = Arrays.asList("chandra","abhi");
+		
+		//testrefernce obj = new testrefernce();
+		
+		
+		//stringList.forEach(System.out :: println);
+		
+		stringList.forEach(testrefernce :: message);
+		
+		LocalDate d = LocalDate.now();
+		LocalTime t = LocalTime.now();
+		LocalDateTime ldt= LocalDateTime.now();
+		
+		
+		
+ 
+		
+	}
+
+}
+

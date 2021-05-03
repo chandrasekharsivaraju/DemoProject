@@ -1,0 +1,93 @@
+package com.example.demo;
+
+public class test1 {
+
+	public static void main(String args[]) {
+		 
+		 
+		 		int minFloor = 0;
+				int  maxFloor = 100;
+				int counter = 0;
+				int breakFloor= 74;
+				int dropFloor=0;
+				int eggs=2;
+				
+				String s="chandra";
+				
+				
+				//Formula d = a -> a*5;
+				
+				Formula fa = new Formula() {
+					
+					@Override
+					public double calculate(float a) {
+						// TODO Auto-generated method stub
+						return 0;
+					}
+					
+					@Override
+					public double calculate(int a) {
+						// TODO Auto-generated method stub
+						return 0;
+					}
+				};
+				
+				//System.out.println("answer is "+d.calculate(10));
+						
+				boolean iterate=Boolean.TRUE;
+				
+				while(iterate)
+				{
+					
+					counter++;
+					dropFloor = (minFloor+maxFloor)/2;
+
+					
+						System.out.println("drop floor ::"+dropFloor);
+					if(dropFloor > breakFloor)
+					{
+					eggs =  eggs - 1;
+
+						if(eggs==1)
+						{
+							System.out.println("eggs are over");
+							
+							for(;minFloor<breakFloor;minFloor++)
+							{
+								counter++;
+							}
+							
+							iterate=Boolean.FALSE;
+							
+						}
+						
+						else
+						{
+						maxFloor = dropFloor;
+						}
+
+
+					}
+					else if(dropFloor < breakFloor)
+					{
+					minFloor = dropFloor;
+
+					}
+					
+					else if(dropFloor == breakFloor)
+					{
+						System.out.println("drop floor found");
+						iterate=Boolean.FALSE;
+
+					}
+					
+					
+					
+				}
+				
+				//System.out.println("counter is "+counter);	
+	}
+	 
+	
+
+}

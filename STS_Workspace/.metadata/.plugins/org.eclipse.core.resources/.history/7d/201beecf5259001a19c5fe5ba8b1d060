@@ -1,0 +1,10 @@
+package com.example.demo;
+
+public interface TestFunctionalInterface {
+	
+	default public void function1()
+	{
+		System.out.println("function 1");
+	}
+
+}

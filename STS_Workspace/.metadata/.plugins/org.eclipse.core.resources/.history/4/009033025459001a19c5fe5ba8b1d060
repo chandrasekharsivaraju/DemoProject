@@ -1,0 +1,20 @@
+package com.example.demo;
+
+@FunctionalInterface
+public interface TestFunctionalInterface {
+	
+	default public void function1()
+	{
+		System.out.println("function 1");
+	}
+	
+	default public void function2()
+	{
+		System.out.println("function 2");
+	}
+	
+	public void function3();
+	
+	public void function4();
+
+}

@@ -1,0 +1,22 @@
+package com.example.demo;
+
+@FunctionalInterface
+public interface Value {
+	
+	int retrieve();
+
+    default int calculate() {
+        return retrieve() * 2;
+    }
+    
+    default int calculate(int a) {
+        return a * 4;
+    }
+    
+    static void display()
+    {
+    	System.out.println("display in static method");
+    }
+}
+
+

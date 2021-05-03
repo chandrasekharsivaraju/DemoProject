@@ -1,0 +1,13 @@
+public class sample {
+
+	public static void main(String args[])
+	{
+		
+		String s = "“<P><B>some text</B></P>";
+		
+		System.out.println(System.identityHashCode(s));
+
+		
+		
+	}
+}

@@ -1,0 +1,34 @@
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class sample {
+
+	public static void main(String args[])
+	{
+		
+		String s = "<P><B>some text</B></P>";
+		
+		List<Integer> list = Arrays.asList(1,6,2,3,1,4,6,5);
+		
+		Set set=new HashSet(list);
+		
+		// Creating a HashSet 
+		Set<Integer> hashSet = new HashSet<Integer>(); 
+        
+        hashSet.add(5);
+        hashSet.add(4);
+        hashSet.add(8);
+        hashSet.add(1);
+        hashSet.add(5);
+        
+        System.out.println(hashSet);
+		
+		System.out.println(list);
+		System.out.println(set);
+
+		
+		
+	}
+}

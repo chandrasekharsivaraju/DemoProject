@@ -1,0 +1,12 @@
+package com.example.demo;
+
+@FunctionalInterface
+public interface Value {
+	
+	void get();
+
+	/*
+	 * default int getDouble() { return get() * 2; }
+	 */
+
+}

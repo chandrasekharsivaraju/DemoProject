@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class sample {
+
+	public static void main(String args[])
+	{
+		
+		String s = "<P><B>some text</B></P>";
+		
+		List<Integer> list = Arrays.asList(1,6,2,3,1,4,6,5);
+		
+		
+		System.out.println(System.identityHashCode(s));
+
+		
+		
+	}
+}

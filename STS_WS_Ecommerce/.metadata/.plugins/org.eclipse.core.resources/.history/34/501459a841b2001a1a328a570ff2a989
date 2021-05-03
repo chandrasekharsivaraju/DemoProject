@@ -1,0 +1,110 @@
+package com.example.demo;
+
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assumptions.assumingThat;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assumptions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.RepetitionInfo;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
+
+@ExtendWith(MockitoExtension.class)
+public class TestCalculator {
+
+	@InjectMocks
+	Calculator cal;
+
+	@Mock
+	CalculatorService service;
+
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+		System.out.println("**** setUpBeforeClass ******");
+	}
+
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
+		System.out.println("**** tearDownAfterClass ******");
+	}
+
+	@BeforeEach
+	void setUp() throws Exception {
+		System.out.println("**** setUp ******");
+	}
+
+	@AfterEach
+	void tearDown() throws Exception {
+		System.out.println("**** tearDown ******");
+	}
+
+	@Nested
+	@DisplayName("Class for testing Compute Functionality")
+	class TestCompute {
+
+		@Test
+		public void testComputePositive() {
+			when(service.addition(5, 3)).thenReturn(8);
+			assertEquals(32, cal.compute(5, 3));
+			verify(service).addition(5, 3);
+		}
+
+		@Test
+		public void testComputeNegative() {
+			when(service.addition(-5, 3)).thenReturn(-2);
+			assertEquals(-8, cal.compute(-5, 3));
+			verify(service).addition(-5, 3);
+		}
+	}
+
+	@RepeatedTest(3)
+	public void testCompute(RepetitionInfo repitionInfo) {
+		if (repitionInfo.getCurrentRepetition() == 1) {
+			when(service.addition(5, 3)).thenReturn(8);
+			assertEquals(32, cal.compute(5, 3));
+		}
+
+		if (repitionInfo.getCurrentRepetition() == 2) {
+			when(service.addition(6, 4)).thenReturn(10);
+			assertEquals(40, cal.compute(6, 4));
+		}
+	}
+
+	@Test
+	void groupedAssertions() {
+		assertAll("Multiplication", () -> assertEquals(15, 3 * 5, "3 x 5 = 15"),
+				() -> assertEquals(15, 5 * 3, "5 x 3 = 15"));
+	}
+	
+	 @Test
+	    void testOnProd() 
+	    {
+	        System.setProperty("ENV", "PROD");
+	        Assumptions.assumeFalse("DEV".equals(System.getProperty("ENV")));
+	        Assumptions.assumeTrue("DEV".equals(System.getProperty("ENV")),() -> "Aborting test: not DEV");
+         
+	    }
+
+	@Test
+	public void testCompe123() {
+
+		when(service.addition(5, 3)).thenReturn(8);
+		assertEquals(32, cal.compute(5, 3), () -> "assertions failed");
+
+		verify(service).addition(5, 3);
+	}
+
+}

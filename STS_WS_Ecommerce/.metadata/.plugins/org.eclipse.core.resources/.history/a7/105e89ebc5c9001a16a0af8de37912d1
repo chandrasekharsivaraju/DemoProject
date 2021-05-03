@@ -1,0 +1,113 @@
+package com.example.demo;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+
+public class javatest implements Value {
+
+	public static void main(String[] args) {
+
+		/*
+		 * // you can Define implementation only for abstract method Value val = () ->
+		 * 5; // Value val1 = (a) -> a*5; Compile error
+		 * 
+		 * // Val object is already created so we can invoke default methods also with
+		 * the // object
+		 * 
+		 * 
+		 * If you have 2 abstract methods now object will not be created so functional
+		 * interface is required for lambda with only one abstract method
+		 * 
+		 * 
+		 * System.out.println("Result is :: " + val.retrieve());// 5
+		 * System.out.println("Result is :: " + val.calculate());// 10
+		 * System.out.println("Result is :: " + val.calculate(7));// 28
+		 * 
+		 * 
+		 * 
+		 * Supplier<List<String>> listSupplier = ArrayList::new; List<String> listOne =
+		 * listSupplier.get();
+		 * 
+		 * Supplier<LocalDateTime> s = () -> LocalDateTime.now(); LocalDateTime time =
+		 * s.get();
+		 * 
+		 * Supplier<Integer> intValues = () -> new Random().nextInt(); int i =
+		 * intValues.get();
+		 * 
+		 * Supplier<StreamModel> streamObj = () -> new StreamModel(10,"chandra"); String
+		 * name=streamObj.get().getName();
+		 * 
+		 */
+
+		/*
+		 * List<Value> list = Arrays.asList( () -> 1, () -> 2 ); int maxDoubled =
+		 * list.stream() .mapToInt(val -> val.getDouble()) .max() .orElse(0);
+		 * System.out.println("answer :: "+maxDoubled);
+		 */
+
+		/*
+		 * // creating sample Collection List<Integer> myList = new
+		 * ArrayList<Integer>(); for (int i = 0; i < 5; i++) myList.add(i);
+		 */
+
+		// Collections.sort(myList, (a, b) -> a.compareTo(b));
+
+		/*
+		 * Thread t2 = new Thread(() -> System.out.println("thread new"));
+		 * 
+		 * t2.start();
+		 */
+		// traversing with Consumer interface implementation
+
+		/*
+		 * Consumer<Integer> mycons = (k) -> System.out.println("lambda impl Value::" +
+		 * k);
+		 * 
+		 * mycons.accept(112);
+		 */
+
+		// Consumer<Integer> myconsnew = System.out::println;
+		// MyConsumer action = new MyConsumer();
+
+		// myList.parallelStream().forEach(System.out::println);
+
+		//// myList.forEach(new MyConsumer());
+
+		// System.out.println("results from consumer"+ action.test);
+		
+		javatest obj = new javatest();
+		obj.display();
+		Value.display();
+		
+		System.out.println("   value "+obj.calculate());
+
+	}
+	
+	/*
+	 * static void display() {
+	 * System.out.println("display fron class in static method"); }
+	 */
+
+	@Override
+	public int retrieve() {
+		// TODO Auto-generated method stub
+		return 22;
+	}
+	
+	
+
+}
+
+// Consumer implementation that can be reused
+class MyConsumer implements Consumer<Integer> {
+
+	List test = new ArrayList<Integer>();
+
+	public void accept(Integer t) {
+
+		test.add(t);
+		System.out.println("Consumer impl Value::" + t);
+	}
+
+}

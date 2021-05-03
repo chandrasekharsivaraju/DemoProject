@@ -1,0 +1,38 @@
+package com.example.demo;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.times;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+
+
+@SpringBootTest
+public class TestCalculator {
+
+	@Autowired
+	Calculator cal;
+
+	@MockBean
+	CalculatorService service;
+	
+	
+	public void setUp()
+	{
+		System.out.println("*********executed***********");
+	}
+
+		
+	@Test
+	public void testCompute() {
+
+		when(service.addition(5, 3)).thenReturn(8);
+		assertEquals(32, cal.compute(5, 3));
+		verify(service).addition(5, 3);
+	}
+
+}

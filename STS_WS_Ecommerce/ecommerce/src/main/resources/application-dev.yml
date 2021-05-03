@@ -1,0 +1,23 @@
+security:
+    oauth2:
+      client:
+        clientId: 7ca05369656c2cd0224a
+        clientSecret: c0cb0fab94e000b957424523dbd5f562131ccba1
+        accessTokenUri: https://github.com/login/oauth/access_token
+        userAuthorizationUri: https://github.com/login/oauth/authorize
+        clientAuthenticationScheme: form
+      resource:
+        userInfoUri: https://api.github.com/user
+        prefer-token-info: false
+spring:
+  datasource:
+    initialization-mode: always
+    password: root
+    url: jdbc:mysql://localhost:3306/springdb
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  
+    
+    

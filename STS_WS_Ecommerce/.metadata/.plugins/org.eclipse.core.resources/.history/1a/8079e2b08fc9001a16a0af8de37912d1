@@ -1,0 +1,24 @@
+package com.example.demo;
+
+@FunctionalInterface
+public interface Formula {
+	
+	int b=10;
+	
+	double calculate(int a);
+
+	double calculate(float a);
+    default double sqrt(int a) {
+    	return a * 2;
+    }
+    
+    default void sqrt(float a) {
+    	
+        double b = Math.sqrt(a*Formula.b);
+    }
+    
+    @Override
+    String toString();
+
+
+}

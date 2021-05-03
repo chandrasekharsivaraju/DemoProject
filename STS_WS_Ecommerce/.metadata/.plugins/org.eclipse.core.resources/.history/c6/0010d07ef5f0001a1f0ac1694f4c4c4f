@@ -1,0 +1,11 @@
+import java.util.stream.IntStream;
+
+public class sample {
+
+	public static void main(String args[])
+	{
+		
+		
+		
+	}
+}
